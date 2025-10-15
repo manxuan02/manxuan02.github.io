@@ -1,0 +1,38 @@
+:root {
+    --expTitle: #135113; /*NEED TO CHANGE*/
+    --writeUp: #135113;
+    --writeUp-date: #5A795A;
+}
+
+.ExpContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    margin: calc(17vh + 5px) auto 190px;
+    max-width: 720px; /*to set the Width for the texts*/
+}
+
+/* Page title */
+.ExpTitle {
+    font-size: 35px;
+    color: var(--expTitle);
+}
+
+/* job name */
+.ExpWriteUp-title {
+    font-size: 22px;
+    color: var(--writeUp);
+}
+/* job date */
+.ExpWriteUp-date {
+    color: var(--writeUp-date);
+}
+/* job description */
+.ExpWriteUp-para {
+    color: var(--writeUp);
+}

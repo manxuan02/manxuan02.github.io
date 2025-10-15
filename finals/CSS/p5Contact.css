@@ -1,0 +1,143 @@
+:root {
+    --cornerRadius: .50rem;
+    --contTitle: #135113;
+    --contactText: #AEA89D;
+    --contactLabelSpan: #000000;
+    --background: #CAE8CA;
+    --submitButton: #6E916E;
+}
+
+.container {
+    padding-left: 0;
+}
+
+.contactContainer {
+    display: grid;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 230px;
+}
+
+.contactForm {
+    grid-template-columns: 300px 340px;
+    margin-top: 3rem;
+}
+
+/* for the tile */
+.section_title {
+    text-align: center;
+    margin-top: 30px; /*NEED TO SET*/
+    font-size: 35px;
+    color: var(--contTitle);
+}
+
+/* the form's container */
+.contactFormContent {
+    position: relative;
+    margin-top: .1rem;
+    margin-bottom: 1.9rem;
+    /* width: 60px; */
+}
+
+/* the INPUT AREA */
+.input {
+    width: 20rem;
+    border: 2px solid var(--contactText);
+    background-color: transparent;
+    padding: .6rem 1.2rem;
+    outline: none;
+    border-radius: var(--cornerRadius);
+    transition: .3s;
+    align-items: center;
+}
+
+textarea.input {
+    padding: .8rem 1.2rem;
+    min-height: 140px;
+    border-radius: var(--cornerRadius);
+    resize: none;    
+}
+/* Label for the containers - INSIDE*/
+.contactFormContent label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    padding: 0.4rem;
+    color: var(--contactText);
+    pointer-events: none;
+    z-index: 1000;
+    transition: .5s;
+}
+/* for 'Message' part only */
+.contactFormContent.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+/* Label for the containers - OUTSIDE */
+.contactFormContent span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    color: transparent; /*so to NOT see the 'span' words*/
+    transform: translateY(-50%); /*to move the 'span' words ON THE LINE*/
+    padding: 0.4rem;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 400;
+}
+.contactFormContent span::before,
+.contactFormContent span::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    opacity: 0;
+    background-color: var(--background);
+    top: 50%;
+    transform: translateY(-50%);
+    /* color: var(--contactLabelSpan); */
+    transition: .3s;
+}
+/*to make 'span' STAY at left:50% */
+.contactFormContent span::before {
+    left: 50%;
+}
+.contactFormContent span::after {
+    right: 50%;
+}
+
+/* when the 'container' is clicked = has focus */
+.contactFormContent.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.contactFormContent.focus span::before,
+.contactFormContent.focus span::after {
+    width: 50%;
+    opacity: 1;
+}
+
+/* for the submit button */
+.button {
+    padding: 0px 20px 10px;
+    align-items: center;
+
+    border-radius: var(--cornerRadius);
+    color: var(--contactLabelSpan); /*color of text*/
+    background-color: var(--submitButton); /*color of button*/
+    border-color: var(--contactText);
+    /* border-color: red; */
+}
+
+/* for the icons */
+.icons {
+    margin-top: 20px;
+}
+
+i {
+    font-size: 40px;
+}

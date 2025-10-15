@@ -1,0 +1,94 @@
+/* For large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px)
+{
+    /* to make the navbar NOT stick to the sides */
+    nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* to change the container position */
+    .aboutContainer,
+    .ExpContainer,
+    .ProjContainer,
+    .contactContainer {
+        margin: calc(17vh + 10px) 30px 200px; /*top, L & R, bottom margin*/
+        max-width: 100%; /*to keep the content responsive*/
+        box-sizing: border-box; /*to ensure padding don't affect width calculations*/
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px)
+{
+    nav {
+        margin-inline: 0 20px;
+    }
+    /* to change logo's font size */
+    #logo {
+        font-size: calc(1.2vw + 10px);
+    }
+    .nav-links {
+        font-size: calc(1.2vw + 5px);
+    }
+}
+@media screen and (max-width: 650px)
+{
+    /*to change logo's font size*/
+    #logo {
+        font-size: 25px;
+    }
+    nav {
+        width: 100%;
+    }
+
+    /*to display the hamburger menu*/
+    #nav-home {
+        display: none;
+    }
+    #nav-hamburger {
+        display: flex;
+    }
+
+    /* HOME page*/
+    /*to change general content font size*/
+    h3 {
+        font-size: 20px;
+    }
+    /*to change 'name' font size*/
+    .profileText-name {
+        font-size: 22px;
+    }
+
+    /* For all 'section' in the other pages*/
+    .aboutWriteUp-p,
+    .ExpWriteUp-date,
+    .ExpWriteUp-para,
+    .ProjWriteUp-year,
+    .ProjWriteUp-name {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    
+    /* to change the container position */
+    .aboutContainer,
+    .ExpContainer,
+    .ProjContainer,
+    .contactContainer {
+        margin: 0 30px 100px;
+        max-width: 95%; /*to keep the content responsive*/
+        box-sizing: border-box; /*to ensure padding don't affect width calculations*/
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 500px)
+{    
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}

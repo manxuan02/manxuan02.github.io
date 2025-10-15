@@ -1,0 +1,25 @@
+:root {
+    --writeUpText: #135113;
+}
+
+.aboutContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    text-align: left;
+
+    margin: calc(20vh + 5px) auto 190px;
+    max-width: 720px; /*to set the Width for the texts*/
+}
+/* Page title */
+.aboutTitle {
+    font-size: 35px;
+    color: var(--writeUpText);
+}
+
+.aboutWriteUp-p {
+    font-size: 1.2rem;
+    color: var(--writeUpText);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Professional Personal Portfolio">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/finals/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/finals/CSS/p2About.css">
+    <link rel="stylesheet" type="text/css" href="/finals/CSS/mediaqueries.css">
+    
+    
+    <title>Man Xuan's Portfolio</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav id="nav-home">
+        <!-- Logo of website -->
+        <div id="logo"><a href="/finals/HTML/index.html">Man Xuan</a></div>
+        <!-- Links on the navigation bar To other pages -->
+        <div>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="/finals/HTML/p3Experience.html">Experience</a></li>
+                <li><a href="/finals/HTML/p4Projects.html">Projects</a></li>
+                <li><a href="/finals/HTML/p5Contact.html">Contact Me</a></li>
+                <!-- <li><a href="/finals/report.html">Report</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Creating hamburger menu -->
+    <nav id="nav-hamburger">
+        <div id="logo"><a href="/finals/HTML/index.html">Man Xuan</a></div> <!--TOP/TITLE of hamburger menu-->
+        <div class="hamburger-menu">
+            <!--LIST/LINES in hamburger menu-->
+            <div class="hamburger-menuIcon justify-content-between" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- actual LINKS of the LINES in hamburger menu, works w 'toggleMenu()'-->
+            <!-- SHOWN on the hamburger menu -->
+            <div class="hamburger-menuLinks">
+                <li><a href="/finals/HTML/index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#" onclick="toggleMenu()">About</a></li>
+                <li><a href="/finals/HTML/p3Experience.html" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="/finals/HTML/p4Projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="/finals/HTML/p5Contact.html" onclick="toggleMenu()">Contact Me</a></li>
+                <li><a href="/finals/report.html" onclick="toggleMenu()">Report</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Write Up -->
+    <section>
+        <div class="aboutContainer">
+            <!-- Profile title -->
+            <div class="aboutTitle">
+                <h2>About</h2>
+            </div>
+            <hr>
+            <!-- Profile writeup -->
+            <div class="aboutWriteUp">
+                <div class="aboutWriteUp-p">
+                    <p>Hi, I'm Man Xuan, and I am passionate about leveraging technology to solve real-world problems and enhance user experiences.</p>
+                    <br>
+                    <p>I am currently a student studying <b>Computer Science</b> at Singapore Institute of Management (<b>SIM</b>), under University of London (<b>UOL</b>). You can find my <a href="/finals/HTML/p4Projects.html">project list here</a>.</p>
+                    <br>
+                    <p>Outside of programming I'm usually doing sports like bouldering, pilates, volleyball, taekwondo, or be playing <b>Cookie Run: Ovenbreak</b>.</p>
+                </div>
+            </div>
+            <!-- Profile pic -->
+            <div class="aboutPicture">
+                <!-- <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed and created by Ku Man Xuan &#169; 2024.</p>
+    </footer>
+
+    <!-- 'calling' the js file -->
+    <script src="/finals/JS/script.js"></script>
+</body>
+</html>

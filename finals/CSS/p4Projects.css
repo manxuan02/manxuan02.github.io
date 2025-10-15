@@ -1,0 +1,35 @@
+:root {
+    --projTitle: #135113;
+    --writeUp: #135113;
+    --writeUp-name: #5A795A;
+}
+
+.ProjContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
+    margin: calc(17vh + 5px) auto 190px;
+    max-width: 720px; /*to set the Width for the texts*/
+}
+
+/* Page title */
+.PorjTitle {
+    font-size: 35px;
+    color: var(--projTitle);
+}
+
+/* project year */
+.ProjWriteUp-year {
+    font-size: 20px;
+    color: var(--writeUp);
+}
+/* project name */
+.PorjWriteUp-name a:hover{
+    /* color: var(--writeUp-name); */
+    color: red;
+}

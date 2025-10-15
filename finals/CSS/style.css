@@ -1,0 +1,199 @@
+/* GENERAL */
+/*url link for the Font*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background: #CAE8CA;
+    --navBar: #6E6E6E;
+    --navBarLinks: #A5A5A5;
+    --navHamburgerMenu: #A0C5A0;
+    --profileText: #135113;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* TRANSITION */
+/*for links & buttons*/
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    justify-content: space-around; /*aligns horizontally*/
+    align-items: center; /*aligns vertically*/
+    height: 17vh;
+    background-color: var(--background);
+}
+
+#nav-home {
+    overflow: hidden;
+    position: fixed; /*Set the navbar to fixed position*/
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    z-index: 1000; /*to UNoverlap the links*/
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--navBar);
+    text-decoration: none;
+    /* text-decoration-color: purple; */
+}
+a:hover {
+    color: var(--navBarLinks);
+    text-decoration: underline;
+    text-underline-offset: 1rem; /*to create a space between word & underline*/
+}
+
+#logo {
+    font-size: 2rem;
+    color: var(--navBar);
+}
+#logo:hover {
+    cursor: default;
+}
+
+/*  HAMBURGER MENU */
+#nav-hamburger {
+    display: none; /*to HIDE the menu lines*/
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block; /*displayed as an inline element + block container*/
+}
+/* LIST/LINES in hamburger menu */
+.hamburger-menuIcon {
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 900; /*to UNoverlap the hamburger menu*/
+    position: fixed; /*set the hamburger menu to fixed position*/
+}
+.hamburger-menuIcon span {
+    /* display: block; */
+    width: 100%;
+    height: 3px;
+    /* margin: 5px auto; */
+    background-color: var(--navHamburgerMenu);
+    transition: all 0.3 ease-in-out; /*changes the hamburger menu's ICON >> X */
+}
+
+.hamburger-menuLinks {
+    position: absolute;
+    top: 100%; /*an absolute's position TOP MARGIN*/
+    right: 0; /*an absolute's position RIGHT MARGIN*/
+    background-color: var(--navHamburgerMenu);
+    width: fit-content;
+    max-height: 0;
+    overflow-y: scroll; /*hides rest of the content*/
+    overflow-x: hidden;
+    transition: all 0.3 ease-in-out;
+    z-index: 1000; /*to UNoverlap the links*/
+}
+.hamburger-menuLinks a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--navBar);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.hamburger-menuLinks li {
+    list-style: none; /*to REMOVE the bullet-points*/
+}
+
+/* when "toggleMenu()" = open */
+.hamburger-menuLinks.open {
+    max-height: 300px;
+    /* color:  */
+}
+/* for 1st element of <span> */
+.hamburger-menuIcon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px); /*transforming the line, rotating it (x & y positions), creating an X*/
+}
+/* for 2nd <span> */
+.hamburger-menuIcon.open span:nth-child(2) {
+    opacity: 0; /*REMOVING the 2nd line*/
+}
+/* for 3rd <span> */
+.hamburger-menuIcon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px); /*transforming the line, creating an X*/
+}
+
+.hamburger-menuIcon span:first-child {
+    transform: none;
+}
+.hamburger-menuIcon span:first-child {
+    opacity: 1;
+}
+.hamburger-menuIcon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+.profileContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20%;
+    text-align: center;
+}
+.profileText {
+    text-transform: uppercase;
+}
+.profileContainer .profileText-name .profileText-textP {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+}
+/* for ALL the text */
+.profileText-textP {
+    font-weight: 300;
+    color: var(--profileText);
+}
+/* for manxuan only */
+.profileText-name {
+    display: inline-flex;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+    bottom: 0;
+
+    /* position: fixed;
+    margin: 0px 23px;
+    bottom: 0;
+    background-color: var(--background); */
+}

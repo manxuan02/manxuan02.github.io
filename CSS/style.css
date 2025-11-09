@@ -63,7 +63,7 @@ a {
 a:hover {
     color: var(--navBarLinks);
     text-decoration: underline;
-    text-underline-offset: 0.5rem; /*to create a space between word & underline*/
+    text-underline-offset: 0.45rem; /*to create a space between word & underline*/
 }
 
 #logo {
